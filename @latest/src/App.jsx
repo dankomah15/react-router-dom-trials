@@ -11,6 +11,7 @@ const App = () => {
     <div>
       
       <Navbar/>
+      <div className='container'>
       
       <Routes>
         <Route path='/' element={<Home/>}/>
@@ -20,6 +21,7 @@ const App = () => {
 
         
       </Routes>
+      </div>
       
       
     </div>
