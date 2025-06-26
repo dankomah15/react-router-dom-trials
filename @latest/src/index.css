@@ -30,7 +30,11 @@ a{
   display: inline-block;
   padding: 5px;
   margin: 0px 10px;
-  color: #000;
+  
+}
+
+a.active{
+  color: red;
 }
 
 .navbar button{
