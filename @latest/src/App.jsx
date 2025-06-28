@@ -4,8 +4,11 @@ import Home from './pages/Home';
 import Products from "./pages/Products";
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider,  } from "react-router-dom";
 import About from "./pages/About"
-import Contact from './pages/Contact'
 import RootLayout from './layout/RootLayout';
+import ContactLayout from './layout/ContactLayout';
+import Contactinfo from './components/Contactinfo';
+import ContactForm from './components/ContactForm';
+import Notfound from './components/Notfound';
 
 
 
@@ -17,7 +20,11 @@ const App = () => {
         <Route index element={<Home/>}/>
         <Route path='/products' element={<Products/>}/>
         <Route path='/about' element={<About/>}/>
-        <Route path='/contact' element={<Contact/>}/>
+        <Route path='/contact' element={<ContactLayout/>}>
+           <Route path='info' element={<Contactinfo/>}/>
+           <Route path='form' element={<ContactForm/>}/>
+        </Route>
+       <Route path='*' element={<Notfound/>}/>
 
 
       </Route>
